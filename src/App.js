@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='container'> 
     <h2>Bank of Flatiron</h2>
-        <Account/>
+     <Account/>
     </div>
   )
 }
