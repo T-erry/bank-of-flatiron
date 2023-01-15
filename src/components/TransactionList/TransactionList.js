@@ -1,26 +1,35 @@
 import React from "react";
 
-function TransactionList() {
+function TransactionList({transactions}) {
   return (
-    <div>
-      <table class="table table-dark table-hover mt-5">
-      <thead>
-            <tr>
-                <th class="header" scope="col">Date</th>
-                <th class="header" scope="col">Description</th>
-                <th class="header" scope="col">Category</th>
-                <th class="header" scope="col">Amount</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>CAT</td>
-                <td>1st Aug</td>
-                <td>Free</td>
-                <td>Online</td>
-            </tr>
-            </tbody>
-      </table>
+    <div className="TransactionList">
+      <table>
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Description</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Period</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+  {transactions.map((transaction)=>{
+     console.log(transaction);
+   return <tr>
+      <td>{transaction.date}</td>
+      <td>{transaction.description}</td>
+      <td>{transaction.category}</td>
+      <td>{transaction.amount}</td>
+
+    </tr>
+
+  })}
+       
+        
+  </tbody>
+</table>
+
     </div>
   );
 }
