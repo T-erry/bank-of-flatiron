@@ -1,8 +1,7 @@
 import React from 'react'
-
 function Search() {
   return (
-    <div>
+    <div className='Search'>
 <input type="text" class="form-control" placeholder='Search For Transaction'/>
     </div>
   )
