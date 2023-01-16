@@ -1,8 +1,14 @@
 import React from 'react'
-function Search() {
+function Search({setSearch}) {
+function handleSearch(e){
+  setSearch(e.target.value)
+  console.log(e.target.value);
+
+}
+
   return (
     <div className='Search'>
-<input type="text" class="form-control" placeholder='Search For Transaction'/>
+<input type="text" onChange={handleSearch} className="form-control" placeholder='Search For Transaction'/>
     </div>
   )
 }

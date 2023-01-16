@@ -11,10 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
- h2{
-  text-align: center;
-  line-height: 1.6;
-  
+input{
+  max-width: 500px;
+  margin: 0 auto;
 }
 table {
   border: 1px solid #ccc;
@@ -52,11 +51,6 @@ table th {
   table {
     border: 0;
   }
-
-  table caption {
-    font-size: 1.3em;
-  }
-  
   table thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -96,12 +90,4 @@ table th {
     border-bottom: 0;
   }
 }
-
-
-
-
-
-
-
-
 

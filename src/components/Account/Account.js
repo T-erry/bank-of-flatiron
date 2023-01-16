@@ -6,7 +6,13 @@ import TransactionList from '../TransactionList/TransactionList'
 
 function Account() {
     const [transactions, setTransactions] = useState([])
+    const [search, setSearch] = useState("");
 
+    function updatedTransactions(newTransations){
+      const updatedTransactionsArray = [...transactions, newTransations]
+      setTransactions(updatedTransactionsArray);
+
+    }
     useEffect(() => {
       fetch("http://localhost:8001/transactions")
       .then((response)=> response.json())
@@ -16,9 +22,9 @@ function Account() {
     }, [])
   return (
     <div>
-        <Search/>
-        <TransactionForm/>
-        <TransactionList transactions={transactions}/>
+        <Search setSearch={setSearch}/>
+        <TransactionForm newData={updatedTransactions}/>
+        <TransactionList transactions={transactions} searchTerm={search}/>
     </div>
   );
 }
